@@ -22,3 +22,4 @@
 20: Moderate, Normal, Quiet, Talpiot, No, No, Yes;
 21: Low, Normal, Quiet, City-Center, No, No, Yes;
 22: Low, Cheap, Loud, Ein-Karem, Yes, Yes, Yes;
+
