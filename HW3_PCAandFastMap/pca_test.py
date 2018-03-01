@@ -5,8 +5,10 @@ from sklearn.decomposition import PCA
 
 filename = sys.argv[1]
 k = int(sys.argv[2])
-from sklearn.decomposition import PCA
-X = np.array([[-1, 1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
-pca=PCA(n_components=1)
-pca.fit(X)
-print pca.transform(X)
+data = np.loadtxt(filename, dtype = "float", delimiter = "\t")
+data = np.mat(data)
+mean = np.mean(data, axis = 0)
+data = data - mean
+pca=PCA(n_components=k, svd_solver='arpack')
+pca.fit(data)
+print pca.components_.T
