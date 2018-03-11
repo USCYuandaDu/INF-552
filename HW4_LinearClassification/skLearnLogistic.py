@@ -14,4 +14,11 @@ X = np.concatenate((ones, X), axis = 1)
 classifier = LogisticRegression()
 classifier.fit(X, Y)
 
+weights = classifier.coef_
+predict = np.dot(X, weights.T)
+res = np.ones((m,1));
+res[predict < 0] = -1
+res = np.multiply(res, Y)
+res[res < 0] = 0
+print np.sum(res, axis=0)[0] / float(m)
 print classifier.coef_
