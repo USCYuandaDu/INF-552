@@ -129,7 +129,7 @@ nn.predict()
 
 predict_test = np.ones((len(data_test),1))
 predict_test[nn.X[2] < 0.5] = 0
-print predict_test
+print predict_test[:,0]
 acc_test = 0
 for i in range(len(data_test)):
 	if(int(predict_test[i, 0]) == Y[i]):
