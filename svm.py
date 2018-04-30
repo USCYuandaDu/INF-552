@@ -98,6 +98,9 @@ class LinearSVM:
 		plt.show()
 
 	def displayNonLin(self):
+		print "Support_vectors:"
+		print self.support_vectors
+		print self.support_vectors_y
 		plt.scatter(self.X[:,0],self.X[:,1],c=self.Y,cmap='bwr',alpha=1,s=50,edgecolors='k')			
 		plt.scatter(self.support_vectors[:,0],self.support_vectors[:,1],facecolors='none',s=100, edgecolors='k')
 		h = 0.1

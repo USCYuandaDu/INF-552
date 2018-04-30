@@ -49,7 +49,7 @@ class NN(object):
 	X = []
 	S = []
 	Theta = []
-	learning_rate = 0.008
+	learning_rate = 0.1
 	def __init__(self, layers, X, Y):
 		self.layers = layers
 		self.n = len(layers)
